@@ -1,0 +1,172 @@
+/* ===========================
+   Root container for the app
+   =========================== */
+.AppComponent {
+  display: flex; /* Use flexbox to arrange children */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
+  min-height: 100vh; /* Make container full viewport height */
+
+  /* Soft, pleasant gradient background */
+  background: linear-gradient(
+    135deg,
+    rgba(57, 61, 126, 0.95) 0%,
+    rgba(84, 89, 172, 0.85) 60%,
+    rgba(109, 195, 187, 0.75) 100%
+  );
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font style for the app */
+  color: #fff; /* Default text color: white */
+  gap: 20px; /* Space between children elements */
+  padding: 20px; /* Padding inside container */
+  box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+/* ===========================
+   Counter display styling
+   =========================== */
+.count {
+  font-size: 5rem; /* Large number display */
+  font-weight: bold; /* Bold number */
+  background: rgba(255, 255, 255, 0.06); /* Soft glass background */
+  backdrop-filter: blur(18px); /* Glassmorphism effect */
+  padding: 40px 100px; /* Padding around the number */
+  border-radius: 20px; /* Rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle border */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35); /* Soft shadow for 3D effect */
+  transition: transform 0.3s ease-in-out; /* Smooth animation for hover effect */
+}
+
+/* Counter hover effect */
+.count:hover {
+  transform: scale(1.05); /* Slightly enlarge counter on hover */
+  box-shadow: 0 0 18px rgba(109, 195, 187, 0.4); /* Soft glow */
+}
+
+/* ===========================
+   General button styling
+   =========================== */
+button {
+  padding: 18px 35px; /* Space inside button (height & width) */
+  font-size: 2rem; /* Bigger text for readability */
+  font-weight: bold; /* Bold text */
+  border: none; /* Remove default border */
+  border-radius: 14px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25); /* Shadow for depth */
+}
+
+/* ===========================
+   Increment button styling
+   =========================== */
+.increment-button {
+  background: linear-gradient(
+    135deg,
+    rgba(109, 195, 187, 0.9),
+    rgba(84, 89, 172, 0.9)
+  ); /* Teal-indigo soft gradient */
+  margin: 10px; /* Space around the button */
+  color: #fff; /* White text */
+}
+
+/* Increment button hover effect */
+.increment-button:hover {
+  box-shadow: 0 0 18px rgba(109, 195, 187, 0.5); /* Soft glow effect */
+  transform: translateY(-2px); /* Slight upward movement */
+}
+
+/* ===========================
+   Decrement button styling
+   =========================== */
+.decrement-button {
+  background: linear-gradient(
+    135deg,
+    rgba(242, 174, 187, 0.9),
+    rgba(84, 89, 172, 0.9)
+  ); /* Soft pink-indigo gradient */
+  margin: 10px;
+  color: #fff;
+}
+
+/* Decrement hover effect, only if not disabled */
+.decrement-button:hover:not(:disabled) {
+  box-shadow: 0 0 18px rgba(242, 174, 187, 0.5); /* Soft glow effect */
+  transform: translateY(-2px);
+}
+
+/* Disabled decrement button styling */
+.decrement-button:disabled {
+  background: rgba(255,255,255,0.25); /* Gray background for disabled */
+  cursor: not-allowed; /* Show 'not allowed' cursor */
+}
+
+/* ===========================
+   Reset button styling
+   =========================== */
+.reset-button {
+  background: linear-gradient(
+    135deg,
+    rgba(84, 89, 172, 0.9),
+    rgba(57, 61, 126, 0.95)
+  ); /* Indigo-navy gradient */
+  color: #fff; /* White text */
+}
+
+/* Reset button hover effect */
+.reset-button:hover {
+  box-shadow: 0 0 18px rgba(84, 89, 172, 0.5); /* Soft glow effect */
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   Input group wrapper
+   =========================== */
+.input-group {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack label and input vertically */
+  align-items: flex-start; /* Align to the left */
+  margin-bottom: 15px; /* Space below each input group */
+  width: 200px; /* Fixed width for all input groups */
+}
+
+/* ===========================
+   Label styling
+   =========================== */
+.input-group label {
+  font-size: 1.2rem; /* Slightly bigger text for readability */
+  margin-bottom: 5px; /* Space between label and input */
+  color: rgb(242, 174, 187); /* Soft pink text color */
+}
+
+/* ===========================
+   Input styling
+   =========================== */
+.input-group input {
+  width: 100%; /* Fill the width of input group */
+  padding: 8px 12px; /* Padding inside input */
+  font-size: 1rem; /* Text size */
+  border-radius: 8px; /* Rounded corners */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* White border */
+  background-color: rgba(255,255,255,0.1); /* Soft transparent background */
+  color: #fff; /* Text color */
+  outline: none; /* Remove default outline */
+  transition: all 0.3s ease; /* Smooth transition for hover/focus */
+}
+
+/* ===========================
+   Input focus effect
+   =========================== */
+.input-group input:focus {
+  border-color: rgb(109, 195, 187); /* Teal border when focused */
+  box-shadow: 0 0 15px rgba(109, 195, 187, 0.5); /* Soft glow effect */
+  background-color: rgba(255,255,255,0.15); /* Slightly brighter background */
+}
+
+/* ===========================
+   Placeholder text color
+   =========================== */
+.input-group input::placeholder {
+  color: rgba(255,255,255,0.6); /* Semi-transparent placeholder */
+}
