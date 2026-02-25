@@ -2,6 +2,8 @@
 
 A modern, pleasant-looking Counter Application built with React and Vite. This project demonstrates state management in React with a polished UI featuring glassmorphism effects and smooth gradients.
 
+**Live Demo:** [https://counterapp-pavan.vercel.app/](https://counterapp-pavan.vercel.app/)
+
 ## Features
 
 - **Increment**: Increase the counter value.
